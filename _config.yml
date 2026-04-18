@@ -8,26 +8,18 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
+site_theme               : "default"
 title                    : "Seokil Ham"
 title_separator          : "-"
 name                     : &name "Seokil Ham"
-description              : &description "Seokil Ham's academic portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
-# 홈 상단 인트로 문구 (Publications 위). 마크다운 사용 가능 (**볼드**, - 리스트 등)
+description              : &description "Seokil Ham's academic portfolio"
 home_intro               : |
   I am a Ph.D. student in Electrical Engineering at KAIST, advised by Prof. Changick Kim. 
   My research primarily focuses on the safety, efficiency, and reasoning of Large Language 
   Models and Multimodal Large Language Models, while maintaining broad interests across 
-  machine learning and computer vision.
+  machine learning and computer vision. If you are interested in my work or would like to 
+  discuss potential internship opportunities in AI research, please feel free to reach out.
 
-# 홈 상단 탭/섹션 구성. 순서대로 표시되며, 항목을 빼면 헤더와 본문에서 모두 제외됨.
-# - id: URL 해시 및 탭 식별자
-# - title: 탭/섹션 제목
-# - type: "publications" → Publications 리스트 (고정 include)
-# - children: 있으면 그룹 섹션(예: Others)으로, 하위 항목이 하위 카테고리로 표시됨
-#   - id, title: 하위 섹션 id/제목
-#   - collection: Jekyll 컬렉션 이름 (talks, teaching 등)
-#   - include: 각 항목 렌더용 include 파일명
 home_nav:
   - id: publications
     title: Publications
@@ -38,25 +30,28 @@ home_nav:
       - id: research-experience
         title: Research Experience
         type: research_experience
-      - id: patents
-        title: Patents
-        type: patents
       - id: projects
         title: Projects
         type: projects
-      # - id: talks
-      #   title: Talks
-      #   collection: talks
-      #   include: archive-single-talk-cv.html
       - id: teaching
         title: Teaching
         collection: teaching
         include: archive-single-cv.html
+      - id: honors
+        title: Honors and Awards
+        type: honors
       - id: academic-activities
         title: Academic Activities
         type: academic_activities
 
-# Academic Activities (Others 하위, config만 사용) — title, year(선택)
+# Honors and Awards
+honors:
+  - title: "Korean Government Scholarship"
+    year: "2019 – present"
+  - title: "Summa Cum Laude, Chung-Ang University"
+    year: "2021"
+
+# Academic Activities
 academic_activities:
   - title: "Conference Reviewer, ICIP"
     year: "2026"
@@ -71,92 +66,43 @@ academic_activities:
   - title: "Conference Reviewer, CVPR"
     year: "2025"
 
+# CV PDF path
+cv_pdf                   : "/files/Seokil_Ham_CV.pdf"
 
-# CV PDF path (used for all "View CV as PDF" links)
-cv_pdf                   : "/files/"
-
-url                      : https://SeokilHam.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
-                                                           # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
-baseurl                  : "" # the subpath of your site, e.g. "/blog"
+url                      : https://SeokilHam.github.io
+baseurl                  : ""
 repository               : "SeokilHam/SeokilHam.github.io"
 
-# Site Author - The following control what appear as part of the author content on the side bar.
-#               If a field is blank the icon and link will not appear, otherwise it will be shown.
-#               Additional customization can be done by editing /_includes/author-profile.html
+# Site Author
 author:
-  # Biographic information
   avatar           : "profile.jpeg"
   name             : "Seokil Ham"
   pronouns         : he/his
-  bio              : "I'm a Ph.D. student at KAIST working on Large Language Models and Multimodal Large Language Models."
+  bio              : "Ph.D. student at KAIST working on LLM/MLLM safety, efficiency, and reasoning."
   location         : "291 Daehak-ro, Yuseong-gu, Daejeon 34141, Republic of Korea"
   employer         : "KAIST\n(Korea Advanced Institute of Science and Technology)"
-  uri              : # URL
+  uri              :
   email            : "gkatjrdlf@kaist.ac.kr"
 
-  # Education entries shown in the Home > Contact/Education boxes
-  # 원하는 만큼 항목을 추가/수정하세요.
   education:
     - degree : "Ph.D. in Electrical Engineering"
-      school : "KAIST (Korea Advanced Institute of Science and Technology)"
+      school : "KAIST"
       years  : "2023 – present"
     - degree : "M.S. in Electrical Engineering"
       school : "KAIST"
       years  : "2021 – 2023"
-    - degree : "B.S. in EE"
-      school : "Chung-Ang Unversity"
+    - degree : "B.S. in Electrical Engineering"
+      school : "Chung-Ang University"
       years  : "2017 – 2021"
 
-
   # Academic websites
-  academia         : # URL
-  arxiv            : # URL - Update with the correct link to your profile
   googlescholar    : "https://scholar.google.com/citations?user=BXlQ2nMAAAAJ"
-  inspire-hep      : # URL
-  impactstory      : # URL
-  orcid            : # URL
-  semantic         : # URL
-  ssrn             : # URL
-  pubmed           : # URL
-  researchgate     : # URL
-  scopus           : # URL
-  zotero           : # URL
 
-
-  # Repositories and software development
-  bitbucket        : # Username - Update with your username on the site
-  codepen          : # Username
-  dribbble         : # Username
+  # Repositories
   github           : "SeokilHam"
-  kaggle           : # Username  
-  stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
-  # Social media
-  artstation       : # Username
-  bluesky          : # Replace this with you Bluesky username
-  facebook         : # Username
-  flickr           : # Username
-  foursquare       : # Username
-  goodreads        : # Username
-  google_plus      : # Username
-  keybase          : # Username
-  instagram        : # Username
-  lastfm           : # Username
+  # Social
   linkedin         : "seokil-ham-aaa7832a4"
-  mastodon         : # URL
-  medium           : # URL
-  pinterest        : # Username
-  soundcloud       : # Username
-  steam            : # Username
-  telegram         : # URL
-  tumblr           : # Username
-  twitter          : # Username for X / Twitter
-  vine             : # Username
-  weibo            : # Username
-  wikipedia        : # Username
-  xing             : # Username
-  youtube          : # Username
-  zhihu            : # Username
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:

@@ -67,7 +67,7 @@ academic_activities:
     year: "2025"
 
 # CV PDF path
-cv_pdf                   : "/files/Seokil_Ham_CV.pdf"
+cv_pdf                   : "/files/SeokilHam_CV_20260418.pdf"
 
 url                      : https://SeokilHam.github.io
 baseurl                  : ""
@@ -75,7 +75,7 @@ repository               : "SeokilHam/SeokilHam.github.io"
 
 # Site Author
 author:
-  avatar           : "profile.jpeg"
+  avatar           : "/images/SeokilHam.jpg"
   name             : "Seokil Ham"
   pronouns         : he/his
   bio              : "Ph.D. student at KAIST working on LLM/MLLM safety, efficiency, and reasoning."
